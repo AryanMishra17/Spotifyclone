@@ -1,0 +1,330 @@
+/*rather than screen shot all provided by copilet*/
+body {
+    background-color: #121212;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    overflow: hidden; /* to hide the scroll bar of body */
+}
+
+.main {
+    display: flex;
+    height: 100vh; /* vh means 100 % of screen */
+    padding: 0.5rem;
+}
+
+.sidebar {
+    width: 350px;
+    background-color: #181818;
+    height: 100vh;
+    border-radius: 1rem; /* 16 px */
+    margin: 0.5rem;
+    padding: 1rem;
+}
+
+.main-content {
+    flex: 1; /* space after sidebar all given to it. */
+    padding: 0 1.5rem 0 1.5rem;
+    border-radius: 1rem;
+    background-color: #121212;
+    overflow: auto; /* to show scroll bar if content is more */
+}
+
+.music-player {
+    width: 100%; /* 100 % of main class tag div */
+    position: fixed;
+    bottom: 0;
+    background-color: #181818;
+    height: 80px;
+    z-index: 1; /* to keep it above other divs */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav {
+    border-radius: 1rem;
+    background-color: #282828;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0.75rem;
+    height: 100px;
+    justify-content: center;
+}
+
+.nav-option {
+    line-height: 2.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    opacity: 0.7;
+    padding: 0.5rem 1rem;
+}
+
+.nav-option:hover {
+    opacity: 1;
+    background-color: #333;
+}
+
+.nav-option.active {
+    background-color: #1db954;
+    opacity: 1;
+}
+
+.nav-option i {
+    font-size: 1.25rem;
+}
+
+.nav-option a {
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+.library {
+    border-radius: 1rem;
+    background-color: #282828;
+    padding: 0.5rem 0.75rem;
+    height: 100%;
+    margin-top: 0.5rem;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.lib-option img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.icons {
+    display: flex;
+    font-size: 1.2rem;
+}
+
+.icons i {
+    opacity: 0.7;
+    cursor: pointer;
+    margin-right: 1.2rem;
+}
+
+.icons i:hover {
+    opacity: 1;
+}
+
+.box {
+    background-color: #333;
+    border-radius: 0.75rem;
+    height: 8rem;
+    margin: 0.75rem 0 1.75rem 0;
+    padding: 0.75rem 1rem;
+}
+
+.box-1 {
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.box-2 {
+    font-size: 0.75rem;
+    opacity: 0.75;
+}
+
+.badge {
+    background-color: #1db954;
+    border: none;
+    border-radius: 100px;
+    padding: 0.25rem 1rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    height: 2rem;
+    width: fit-content;
+    color: black;
+}
+
+.sticky-nav {
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    background-color: #181818;
+    display: flex;
+    position: sticky;
+    padding: 1rem 0;
+    z-index: 10;
+}
+
+.sticky-nav-icon {
+    margin-left: 0.75rem;
+}
+
+.sticky-nav-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-item {
+    margin-right: 1.5rem;
+}
+
+.dark-badge {
+    background-color: black;
+    color: white;
+}
+
+@media screen and (max-width: 1000px) {
+    .hide {
+        display: none;
+    }
+}
+
+.card {
+    background-color: #333;
+    width: 150px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1.5rem; /* gap b/w card's */
+    margin-top: 1rem;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-img {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+.card-info {
+    font-size: 0.8rem;
+    opacity: 0.75;
+}
+
+.footer {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line {
+    width: 90%; /* 90% of footer */
+    height: 50%;
+    border-top: 1px solid white;
+    opacity: 0.4;
+}
+
+.music-player {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 1rem;
+   
+}
+
+.album {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+}
+.album img {
+    width: 50px;
+    height: 50px;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    
+}
+
+.player {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.controls {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+.controls img {
+    margin: 0 1rem;
+}
+
+.player-control-icon {
+    height: 1.5rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+}
+
+.player-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.playback-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.playback-bar .curr-time,
+.playback-bar .tot-time {
+    font-size: 0.75rem;
+    margin: 0 0.5rem;
+}
+
+.playback-bar .progress-bar {
+    flex: 1;
+    cursor: pointer;
+    background-color: #404040;
+    border: none;
+    height: 4px;
+    border-radius: 2px;
+    outline: none;
+   
+}
+
+.playback-bar .progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    background: #1db954;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.controls .control-s{
+    width: 24px;
+    height: 24px;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    
+}
